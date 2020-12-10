@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Hack Nerd Font:pixelsize=18:antialias=true:autohint=true";
-static char *font2[] = { "Hack Nerd Font:pixelsize=18:antialias=true:autohint=true" };
+static char *font2[] = { "JoyPixels:pixelsize=18:antialias=true:autohint=true" };
 static int borderpx = 10;
 
 /*
@@ -105,10 +105,10 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 
 /* bg opacity */
-float alpha = 1;
+float alpha = 0.7;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -246,7 +246,7 @@ static Shortcut shortcuts[] = {
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
 	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
 	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
-	{ MODKEY,               XK_Home,        zoomreset,      {.f =  0} },
+	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_Insert,      clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
